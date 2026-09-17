@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>이클립스: 더 어웨이크닝 × 피카플레이 APP 미션 이벤트</title>
+<meta name="description" content="피카플레이 APP에서 이클립스: 더 어웨이크닝을 플레이하고 3,000 마일리지를 받아가세요.">
+<meta name="keywords" content="이클립스,더 어웨이크닝,피카플레이,이벤트,마일리지">
+<meta name="author" content="ECLIPSE × PICAPLAY">
+<meta name="theme-color" content="#07060a">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="ECLIPSE × PICAPLAY">
+<meta property="og:title" content="이클립스: 더 어웨이크닝 × 피카플레이 APP 미션 이벤트">
+<meta property="og:description" content="피카플레이 APP에서 이클립스: 더 어웨이크닝을 플레이하고 3,000 마일리지를 받아가세요.">
+<meta property="og:url" content="https://ics.mediaweb.co.kr/_event/20260919_Eclipse_Picapaly/index.html" />
+<meta property="og:image" content="https://ics.mediaweb.co.kr/_event/20260919_Eclipse_Picapaly/assets/Thumbnail_800x400.jpg">
+<meta property="og:image:alt" content="이클립스: 더 어웨이크닝 × 피카플레이 이벤트">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="이클립스: 더 어웨이크닝 × 피카플레이 APP 미션 이벤트">
+<meta name="twitter:description" content="피카플레이 APP에서 이클립스: 더 어웨이크닝을 플레이하고 3,000 마일리지를 받아가세요.">
+<meta name="twitter:url" content="https://ics.mediaweb.co.kr/_event/20260919_Eclipse_Picapaly/index.html" />
+<meta name="twitter:image" content="https://ics.mediaweb.co.kr/_event/20260919_Eclipse_Picapaly/assets/Thumbnail_800x400.jpg">
+<meta name="twitter:image:alt" content="이클립스: 더 어웨이크닝 × 피카플레이 이벤트">
+
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="cb-header" id="top">
+  <div class="cb-header__inner">
+    <div class="cb-header__notice-wrap">
+      <p class="cb-header__notice">본 이벤트는 피카플레이APP에서 참여 가능합니다.</p>
+    </div>
+    <button class="btn-share" type="button" id="btnShare" aria-label="공유하기">
+      <img src="assets/share_icon.svg" alt="share icon" />
+      <span>공유하기</span>
+    </button>
+  </div>
+</header>
+
+<script>
+// Hero Intro 부트스트랩 — CSS/JS보다 먼저 동기 실행되어야 FOUC(완성된 화면이 잠깐 보였다 사라지는 현상) 없이
+// 처음부터 "숨김" 상태로 렌더링된다. JS가 꺼져 있으면 이 태그 자체가 실행되지 않아 콘텐츠는 항상 정상 표시된다.
+(function () {
+  var html = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return; // 모션 최소화 사용자는 처음부터 완성된 상태로 보여준다
+  html.classList.add('intro-run');
+  // 안전장치: script.js가 어떤 이유로든 로드/실행되지 못해도 3초 후 강제로 정상 표시
+  setTimeout(function () { html.classList.remove('intro-run'); }, 3000);
+})();
+</script>
+
+<!-- ===== SEC 01 · MAIN HEADER ===== -->
+<header class="header">
+  <div class="header__bg"></div>
+  <div class="header__glow"></div>
+  <canvas class="header__embers" id="emberCanvas" aria-hidden="true"></canvas>
+  <div class="header__scrim"></div>
+
+  <div class="header__character-stage">
+    <img class="header__character" src="assets/char_fighter_v3.webp" alt="ECLIPSE 캐릭터">
+  </div>
+
+  <div class="header__inner">
+    <div class="header__copy">
+      <div class="header__copy-bottom">
+        <div class="header__lockup">
+          <img class="eclipse" src="assets/logo_eclipse_v2.webp" alt="ECLIPSE: THE AWAKENING">
+          <span class="x eyebrow">×</span>
+          <img class="picaplay" src="assets/logo_picaplay.png" alt="PICAPlay">
+        </div>
+
+        <h1 class="header__title">
+          <span class="header__title-layer header__title-layer--base">피카플레이 APP<br>게임 플레이 미션 오픈</span>
+          <span class="header__title-layer header__title-layer--shine" aria-hidden="true">피카플레이 APP<br>게임 플레이 미션 오픈</span>
+        </h1>
+        <p class="header__sub">이제 모바일게임도 혜택 받고 플레이하세요!</p>
+
+        <div class="header__period">
+          <span class="label eyebrow">이벤트 기간</span>
+          <span class="value">9월 19일 ~ 소진 시까지</span>
+        </div>
+
+        <!-- CTA · PC = QR 레이어 / MO = #howto 앵커 -->
+        <div class="header__cta">
+          <div class="pc-only header__cta-row">
+            <label for="qrToggle" class="cta-pc-img-btn">
+              <img src="assets/bt.png" alt="이클립스 미션 확인하기">
+            </label>
+          </div>
+          <a class="mo-only cta-mo-img-btn" href="#howto">
+            <img src="assets/bt.png" alt="이클립스 미션 확인하기">
+          </a>
+        </div>
+        <img class="header__scroll-icon" src="assets/scroll.png" alt="">
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- qr-layer는 fixed 포지션이 뷰포트 기준으로 동작해야 하므로,
+     container-type이 걸린 .header__copy, isolation이 걸린 .header 밖(body 바로 아래)에 둔다. -->
+<input type="checkbox" id="qrToggle" class="qr-chk">
+<div class="qr-layer">
+  <label for="qrToggle" class="qr-layer__dim"></label>
+  <div class="qr-layer__box">
+    <label for="qrToggle" class="qr-layer__close">&#10005;</label>
+    <p class="qr-layer__eyebrow eyebrow">SCAN TO INSTALL</p>
+    <h3 class="qr-layer__title">QR로 피카플레이 App 설치</h3>
+    <p class="qr-layer__desc">모바일로 QR을 스캔해 앱 설치 후 미션에 참여하세요.</p>
+    <div class="qr-layer__single">
+      <img src="assets/qr.jpg" alt="피카플레이 App 설치 QR">
+    </div>
+  </div>
+</div>
+
+<!-- ===== SEC 01 · REWARD ===== -->
+<section id="reward" class="reward-section">
+  <div class="reward-section__scrim"></div>
+  <div class="reward-section__glow"></div>
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow-label eyebrow">01 · REWARD</span>
+      <h2 class="section-title">첫 플레이 미션은,<br class="mo-only"> 이클립스: 더 어웨이크닝</h2>
+      <p class="section-desc" style="font-size:clamp(12px,1.4vw,14px)">이클립스 × 피카플레이 APP</p>
+    </div>
+
+    <div class="reward-grid">
+      <div class="reward-kv">
+        <div class="reward-kv__dim"></div>
+        <img class="reward-kv__character" src="assets/char_fighter.webp" alt="">
+        <div class="reward-kv__reward">
+          <div class="reward-kv__coupon-wrap">
+            <img class="reward-kv__coupon" src="assets/coupon.webp" alt="3,000 마일리지">
+          </div>
+          <p class="reward-kv__desc">조건 달성 시, 참여 조건은 미션 상세에서 확인하세요</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEC 02 · HOW TO PLAY ===== -->
+<section id="howto" class="howto-section">
+  <div class="howto-section__scrim"></div>
+  <div class="wrap-pad">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow-label eyebrow">02 · HOW TO PLAY</span>
+      <h2 class="section-title">이클립스 미션, 이렇게 참여하세요</h2>
+    </div>
+  </div>
+
+  <div class="snap-track step-track">
+    <article id="step1" class="step-card">
+      <div class="step-card__mockup">
+        <div class="step-card__slot">
+          <img src="assets/step_01.webp" alt="피카플레이 APP 실행 화면">
+        </div>
+      </div>
+      <div class="step-card__body">
+        <span class="step-card__tag eyebrow">STEP 01</span>
+        <h3 class="step-card__title">피카플레이 App 설치</h3>
+        <p class="step-card__desc">스토어에서 앱을 설치하고 실행해요.</p>
+      </div>
+    </article>
+
+    <article id="step2" class="step-card">
+      <div class="step-card__mockup">
+        <div class="step-card__slot">
+          <img src="assets/step_02.webp" alt="미션 조건 확인·참여 화면">
+        </div>
+      </div>
+      <div class="step-card__body">
+        <span class="step-card__tag eyebrow">STEP 02</span>
+        <h3 class="step-card__title">모바일 게임 미션 터치</h3>
+        <p class="step-card__desc">홈에서 모바일 게임 미션을 선택해요.</p>
+      </div>
+    </article>
+
+    <article id="step3" class="step-card">
+      <div class="step-card__mockup">
+        <div class="step-card__slot">
+          <img src="assets/step_03.webp" alt="미션 달성·보상 확인 화면">
+        </div>
+      </div>
+      <div class="step-card__body">
+        <span class="step-card__tag eyebrow">STEP 03</span>
+        <h3 class="step-card__title">이클립스: 더 어웨이크닝 미션 참여하기 터치</h3>
+        <p class="step-card__desc">미션 참여하기를 눌러 게임을 설치·플레이해요.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="wrap-pad">
+    <div class="mo-only">
+      <div class="step-pagination">
+        <img class="active" src="assets/dot.png" alt="">
+        <img src="assets/dot.png" alt="">
+        <img src="assets/dot.png" alt="">
+      </div>
+      <p class="swipe-hint">&#8592; 좌우로 넘겨 다음 단계를 확인하세요 &#8594;</p>
+    </div>
+    <p class="howto-note">참여 전 미션 상세의 설치·실행 순서와 인정 조건을 먼저 확인해 주세요.</p>
+  </div>
+</section>
+
+<!-- ===== SEC 03 · JOIN NOW ===== -->
+<section id="join" class="join-section">
+  <div class="join-section__scrim"></div>
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow-label eyebrow">03 · JOIN NOW</span>
+      <h2 class="section-title">피카플레이 APP에서<br>첫 모바일게임 미션을 만나보세요</h2>
+      <p class="section-desc">피카플레이 APP의 해당 미션 상세에서 확인해 주세요.</p>
+    </div>
+
+    <div class="join-grid">
+      <div class="pc-only join-panel join-panel--qr" data-reveal data-reveal-delay="100">
+        <div class="join-panel__qr-col">
+          <span class="eyebrow-label eyebrow" style="font-size:11px">PC &#8594; MOBILE</span>
+          <div class="qr-slot">
+            <img src="assets/qr.jpg" alt="미션 상세 QR">
+          </div>
+          <p style="margin:0;font-size:12.5px;color:var(--gray-txt);text-align:center">모바일로 QR을 스캔해 미션 상세로 이동하세요.</p>
+          <div class="path-row">
+            <span class="path-chip">피카플레이 APP</span>
+            <span class="path-arrow-group">
+              <span class="path-arrow">&#8594;</span>
+              <span class="path-chip">게임 플레이 미션</span>
+            </span>
+            <span class="path-arrow-group">
+              <span class="path-arrow">&#8594;</span>
+              <span class="path-chip active">이클립스</span>
+            </span>
+          </div>
+        </div>
+        <img class="join-panel__app-preview" src="assets/03_app.webp" alt="피카플레이 App 미리보기">
+      </div>
+
+      <div class="mo-only join-panel join-panel--app" data-reveal data-reveal-delay="100">
+        <span class="eyebrow-label eyebrow" style="font-size:11px">APP DOWNLOAD</span>
+        <p style="margin:0;font-size:13.5px;line-height:1.7;color:var(--gray-txt)">피카플레이 App을 설치하고 미션 상세에서 참여하세요.</p>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.mediaweb.picaplay" target="_blank" rel="noopener">Google Play 다운로드</a>
+        <a class="btn btn-outline" href="https://apps.apple.com/kr/app/피카플레이/id1434266163" target="_blank" rel="noopener">App Store 다운로드</a>
+        <div class="join-panel__divider"></div>
+        <div class="join-panel__path-group">
+          <span class="eyebrow-label eyebrow" style="font-size:10px">MISSION PATH</span>
+          <div class="path-row path-row--vertical">
+            <span class="path-chip">피카플레이 APP</span>
+            <span class="path-arrow-group">
+              <span class="path-arrow">&#8595;</span>
+              <span class="path-chip">게임 플레이 미션</span>
+            </span>
+            <span class="path-arrow-group">
+              <span class="path-arrow">&#8595;</span>
+              <span class="path-chip active">이클립스</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section">
+  <div class="wrap">
+    <h2 class="faq-title" data-reveal>참여 전 꼭 확인하세요</h2>
+    <div class="faq-list">
+      <div class="faq-item" data-reveal>
+        <img src="assets/Q.png" alt="Q">
+        <div>
+          <h3 class="faq-item__q">어디에서 참여하나요?</h3>
+          <p class="faq-item__a">피카플레이 APP의 해당 미션 상세에서 확인해 주세요.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-reveal data-reveal-delay="90">
+        <img src="assets/Q.png" alt="Q">
+        <div>
+          <h3 class="faq-item__q">어떻게 보상받나요?</h3>
+          <p class="faq-item__a">미션 조건 달성 시 안내된 지급 기준에 따라 3,000M이 지급됩니다.</p>
+        </div>
+      </div>
+      <div class="faq-item" data-reveal data-reveal-delay="180">
+        <img src="assets/Q.png" alt="Q">
+        <div>
+          <h3 class="faq-item__q">참여 전에 무엇을 확인하나요?</h3>
+          <p class="faq-item__a">대상·기간·지원 환경·설치 경로·지급 기준을 먼저 확인해 주세요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 유의사항 ===== -->
+<section class="notice-section">
+  <div class="wrap" data-reveal>
+    <h2 class="notice-title">유의사항</h2>
+    <ul class="notice-list">
+      <li>·&nbsp; 피카플레이 계정 한 개당 1회씩만 보상을 받을 수 있습니다.</li>
+      <li>·&nbsp; 비정상적인 방법으로 보상 수급 시 제재될 수 있습니다.</li>
+      <li>·&nbsp; 보상 마일리지는 소진 시 이벤트가 조기 종료될 수 있습니다.</li>
+      <li>·&nbsp; 참여 기간·대상·지원 OS·지급 시점 등 세부 기준은 미션 상세 공지를 따릅니다.</li>
+    </ul>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+<div id="shareModal" class="share-modal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle" aria-hidden="true">
+  <div class="share-modal__dialog" role="document">
+    <button type="button" class="share-modal__close" id="shareModalClose" aria-label="닫기">&times;</button>
+    <h2 id="shareModalTitle" class="share-modal__title">공유하기</h2>
+    <div class="share-modal__grid">
+      <button type="button" class="share-item share-item--kakao" data-share="kakao" aria-label="카카오톡으로 공유">
+        <span class="share-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.86 5.32 4.66 6.73L5.5 21.5l4.2-2.47c.76.11 1.54.17 2.3.17 5.52 0 10-3.58 10-8S17.52 3 12 3z"/></svg>
+        </span>
+        <span class="share-item__label">카카오톡</span>
+      </button>
+      <button type="button" class="share-item share-item--facebook" data-share="facebook" aria-label="페이스북으로 공유">
+        <span class="share-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5v3.1h2.6V21h3.4z"/></svg>
+        </span>
+        <span class="share-item__label">페이스북</span>
+      </button>
+      <button type="button" class="share-item share-item--twitter" data-share="twitter" aria-label="트위터(X)로 공유">
+        <span class="share-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+        </span>
+        <span class="share-item__label">트위터</span>
+      </button>
+      <button type="button" class="share-item share-item--naver" data-share="naver" aria-label="네이버 블로그로 공유">
+        <span class="share-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.91 12.03 9.94 6H6v12h4.09v-6.03L14.06 18H18V6h-4.09z"/></svg>
+        </span>
+        <span class="share-item__label">네이버블로그</span>
+      </button>
+      <button type="button" class="share-item share-item--instagram" data-share="instagram" aria-label="인스타그램 공유용 URL 복사">
+        <span class="share-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </span>
+        <span class="share-item__label">인스타그램</span>
+      </button>
+      <button type="button" class="share-item share-item--copy" data-share="copy" aria-label="URL 복사">
+        <span class="share-item__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </span>
+        <span class="share-item__label">URL 복사</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="copyToast" class="copy-toast" role="status" aria-live="polite">클립보드에 복사되었습니다.</div>
+<div class="mobile-fab" role="group" aria-label="모바일 플로팅 버튼">
+  <button class="mobile-fab__btn" type="button" id="btnShareFloating" aria-label="공유하기">
+    <img src="assets/share_icon.svg" alt="" aria-hidden="true" loading="lazy" />
+  </button>
+  <button class="mobile-fab__btn mobile-fab__btn--top" type="button" id="btnScrollTop" aria-label="맨 위로">
+    <span aria-hidden="true">TOP</span>
+  </button>
+</div>
+
+<script>
+  var SHARE_CONFIG = {
+    title: '이클립스: 더 어웨이크닝 × 피카플레이 APP 미션 이벤트',
+    description: '피카플레이 APP에서 이클립스: 더 어웨이크닝을 플레이하고 3,000 마일리지를 받아가세요.',
+    kakaoKey: 'd1c0c39f4dbac0062bf36527a3021357',
+    ogImage:  'https://ics.mediaweb.co.kr/_event/20260919_Eclipse_Picapaly/assets/Thumbnail_800x400.jpg'
+  };
+
+  var copyToast = document.getElementById('copyToast');
+  var copyToastTimer = null;
+  var DEFAULT_TOAST_MSG = '클립보드에 복사되었습니다.';
+  function showCopyToast(msg) {
+    if (!copyToast) { return; }
+    copyToast.textContent = msg || DEFAULT_TOAST_MSG;
+    copyToast.classList.add('is-visible');
+    if (copyToastTimer) { clearTimeout(copyToastTimer); }
+    copyToastTimer = setTimeout(function() {
+      copyToast.classList.remove('is-visible');
+    }, 2200);
+  }
+  function fallbackCopyText(text) {
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    var copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch (e) {}
+    document.body.removeChild(textarea);
+    return copied;
+  }
+  function copyUrlWithToast(url, toastMsg) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(function() {
+        showCopyToast(toastMsg);
+      }).catch(function() {
+        if (fallbackCopyText(url)) { showCopyToast(toastMsg); }
+      });
+    } else if (fallbackCopyText(url)) {
+      showCopyToast(toastMsg);
+    }
+  }
+
+  (function initKakao() {
+    if (!window.Kakao || !SHARE_CONFIG.kakaoKey) { return; }
+    if (Kakao.isInitialized && Kakao.isInitialized()) { return; }
+    try { Kakao.init(SHARE_CONFIG.kakaoKey); } catch (e) {}
+  })();
+
+  var shareModal = document.getElementById('shareModal');
+  var shareModalClose = document.getElementById('shareModalClose');
+  var lastShareTrigger = null;
+  function openShareModal(trigger) {
+    if (!shareModal) { return; }
+    lastShareTrigger = trigger || null;
+    shareModal.classList.add('is-open');
+    shareModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (shareModalClose) { shareModalClose.focus(); }
+  }
+  function closeShareModal() {
+    if (!shareModal) { return; }
+    shareModal.classList.remove('is-open');
+    shareModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastShareTrigger && lastShareTrigger.focus) { lastShareTrigger.focus(); }
+  }
+  if (shareModal) {
+    shareModal.addEventListener('click', function(e) {
+      if (e.target === shareModal) { closeShareModal(); }
+    });
+  }
+  if (shareModalClose) {
+    shareModalClose.addEventListener('click', closeShareModal);
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && shareModal && shareModal.classList.contains('is-open')) {
+      closeShareModal();
+    }
+  });
+
+  function openPopup(url) {
+    var w = 600, h = 600;
+    var left = (window.screen.width  - w) / 2;
+    var top  = (window.screen.height - h) / 2;
+    window.open(url, '_blank', 'width=' + w + ',height=' + h + ',left=' + left + ',top=' + top + ',noopener');
+  }
+  function shareFacebook() {
+    var u = encodeURIComponent(window.location.href);
+    openPopup('https://www.facebook.com/sharer/sharer.php?u=' + u);
+  }
+  function shareTwitter() {
+    var u = encodeURIComponent(window.location.href);
+    var t = encodeURIComponent(SHARE_CONFIG.title);
+    openPopup('https://twitter.com/intent/tweet?url=' + u + '&text=' + t);
+  }
+  function shareNaver() {
+    var u = encodeURIComponent(window.location.href);
+    var t = encodeURIComponent(SHARE_CONFIG.title);
+    openPopup('https://share.naver.com/web/shareView?url=' + u + '&title=' + t);
+  }
+  function shareKakao() {
+    if (!window.Kakao || !Kakao.Share) { return; }
+    if (!Kakao.isInitialized || !Kakao.isInitialized()) { return; }
+    try {
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: SHARE_CONFIG.title,
+          description: SHARE_CONFIG.description,
+          imageUrl: SHARE_CONFIG.ogImage,
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href
+          }
+        },
+        buttons: [{
+          title: '자세히 보기',
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href
+          }
+        }]
+      });
+    } catch (e) {}
+  }
+  function shareInstagram() {
+    copyUrlWithToast(window.location.href, 'URL이 복사되었습니다. 인스타그램에 붙여넣어 주세요.');
+  }
+  function shareCopy() {
+    copyUrlWithToast(window.location.href, '클립보드에 복사되었습니다.');
+  }
+  var SHARE_HANDLERS = {
+    kakao:     shareKakao,
+    facebook:  shareFacebook,
+    twitter:   shareTwitter,
+    naver:     shareNaver,
+    instagram: shareInstagram,
+    copy:      shareCopy
+  };
+  if (shareModal) {
+    shareModal.addEventListener('click', function(e) {
+      var target = e.target.closest ? e.target.closest('[data-share]') : null;
+      if (!target) { return; }
+      var type = target.getAttribute('data-share');
+      var handler = SHARE_HANDLERS[type];
+      if (typeof handler === 'function') {
+        handler();
+        closeShareModal();
+      }
+    });
+  }
+
+  var btnShare = document.getElementById('btnShare');
+  if (btnShare) {
+    btnShare.addEventListener('click', function() { openShareModal(btnShare); });
+  }
+  var btnShareFloating = document.getElementById('btnShareFloating');
+  if (btnShareFloating) {
+    btnShareFloating.addEventListener('click', function() { openShareModal(btnShareFloating); });
+  }
+  var btnScrollTop = document.getElementById('btnScrollTop');
+  if (btnScrollTop) {
+    btnScrollTop.addEventListener('click', function (e) {
+      e.preventDefault();
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var behavior = reduce ? 'auto' : 'smooth';
+      try {
+        window.scrollTo({ top: 0, left: 0, behavior: behavior });
+      } catch (err) {
+        (document.scrollingElement || document.documentElement).scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    });
+  }
+</script>
+</body>
+</html>
