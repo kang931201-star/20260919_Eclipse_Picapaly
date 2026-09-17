@@ -411,15 +411,6 @@ html.intro-run .header__cta{ opacity: 0; transform: translateY(12px); }
 }
 .path-row--vertical .path-arrow{ font-size: 11px; opacity: 0.55; line-height: 1; }
 
-/* ===== FAQ ===== */
-.faq-section{ padding: clamp(50px,6vw,86px) clamp(16px,4vw,40px); background: #07060a; }
-.faq-title{ margin: 0 0 clamp(22px,3vw,34px); text-align: center; font-family: var(--font-title); font-size: clamp(20px,2.8vw,28px); font-weight: 700; color: var(--white-ink); }
-.faq-list{ display: grid; gap: 12px; }
-.faq-item{ display: flex; gap: 14px; padding: clamp(18px,2.2vw,24px); border: 1px solid rgba(201,162,74,0.22); background: rgba(16,13,9,0.7); }
-.faq-item img{ width: 26px; height: 26px; flex: 0 0 auto; display: block; }
-.faq-item__q{ margin: 0 0 6px; font-size: 15px; font-weight: 700; color: #f3e4c2; }
-.faq-item__a{ margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--gray-txt); }
-
 /* ===== Notice ===== */
 .notice-section{ padding: clamp(40px,5vw,64px) clamp(16px,4vw,40px); background: #050407; border-top: 1px solid rgba(201,162,74,0.16); }
 .notice-title{ margin: 0 0 16px; font-family: var(--font-title); font-size: 16px; font-weight: 700; color: var(--gold-soft); }
