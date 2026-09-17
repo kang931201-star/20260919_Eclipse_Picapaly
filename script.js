@@ -1,18 +1,8 @@
 // 이클립스 x 피카플레이 이벤트 페이지
-// 현재 인터랙션(QR 팝업 토글, 스텝 슬라이드)은 순수 CSS(체크박스 토글 + scroll-snap)로 동작하므로
+// 현재 인터랙션(스텝 슬라이드)은 순수 CSS(scroll-snap)로 동작하므로
 // 별도 JS 로직은 필요 없습니다. 아래는 편의 기능만 추가합니다.
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Esc 키로 QR 팝업 닫기
-  const qrToggle = document.getElementById('qrToggle');
-  if (qrToggle) {
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && qrToggle.checked) {
-        qrToggle.checked = false;
-      }
-    });
-  }
-
   // 마우스를 따라다니는 골드 글리터 커서
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;

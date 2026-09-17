@@ -68,8 +68,6 @@ h1,h2,h3,p,ul{ margin: 0; max-width: 100%; }
 .section-title{ font-family: var(--font-title); font-size: clamp(26px,3.8vw,40px); font-weight: 700; line-height: 1.35; color: var(--white-ink); }
 .snap-track{ -ms-overflow-style: none; scrollbar-width: none; }
 .snap-track::-webkit-scrollbar{ display: none; }
-.qr-chk{ position: absolute; width: 0; height: 0; opacity: 0; }
-.qr-chk:checked ~ .qr-layer{ display: flex !important; }
 
 .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
 .btn-primary{
@@ -224,46 +222,13 @@ h1,h2,h3,p,ul{ margin: 0; max-width: 100%; }
   0%, 100% { transform: translateY(0); opacity: 0.5; }
   50% { transform: translateY(6px); opacity: 1; }
 }
-.header__cta-row{ display: flex; justify-content: center; width: 100%; }
-.cta-pc-img-btn{
-  position: relative; display: block; width: clamp(220px,25vw,350px);
-  aspect-ratio: 489 / 126; overflow: hidden; cursor: pointer;
-}
-.cta-pc-img-btn img{ position: absolute; left: 0; top: 0; width: 100%; height: auto; }
-.cta-pc-img-btn:hover{ filter: brightness(1.08); }
-.cta-pc-img-btn:active{ transform: scale(0.98); }
 .cta-mo-img-btn{
   position: relative; display: block; width: 85%; max-width: 350px;
   aspect-ratio: 489 / 126; overflow: hidden; cursor: pointer;
 }
 .cta-mo-img-btn img{ position: absolute; left: 0; top: 0; width: 100%; height: auto; }
+.cta-mo-img-btn:hover{ filter: brightness(1.08); }
 .cta-mo-img-btn:active{ transform: scale(0.98); }
-
-.qr-layer{
-  display: none; position: fixed; inset: 0; z-index: 90; align-items: center; justify-content: center;
-  padding: 24px; background: rgba(4,6,11,0.78);
-}
-.qr-layer__dim{ position: absolute; inset: 0; cursor: default; }
-.qr-layer__box{
-  position: relative; width: 100%; max-width: 480px; padding: 34px clamp(20px,4vw,38px) 32px;
-  border: 1px solid rgba(201,162,74,0.55); border-radius: 6px;
-  background: #12100b url('assets/entry_bg.webp') center/cover;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
-}
-.qr-layer__close{
-  position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; display: flex;
-  align-items: center; justify-content: center; cursor: pointer;
-  border: 1px solid rgba(201,162,74,0.35); border-radius: 4px; color: var(--gold);
-  font-size: 15px; background: rgba(7,6,10,0.6);
-}
-.qr-layer__eyebrow{ margin: 0 0 6px; font-size: 11px; letter-spacing: 0.2em; color: var(--gold-dim); }
-.qr-layer__title{ margin: 0 0 8px; font-family: var(--font-title); font-size: 22px; font-weight: 700; color: var(--white-ink); }
-.qr-layer__desc{ margin: 0 0 22px; font-size: 13px; line-height: 1.6; color: var(--gray-txt); }
-.qr-layer__single{
-  width: min(60%,220px); margin: 0 auto; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center;
-  border-radius: 4px; background: #fff; padding: 10px; overflow: hidden;
-}
-.qr-layer__single img{ width: 100%; height: 100%; object-fit: contain; display: block; }
 
 /* ===== Hero Intro Sequence =====
    html.intro-run이 붙어있는 동안에만 아래 "숨김" 상태가 적용된다(FOUC 방지용 부트스트랩 스크립트가 body 맨 위에서
@@ -326,7 +291,7 @@ html.intro-run .header__cta{ opacity: 0; transform: translateY(12px); }
 .reward-kv__reward{
   position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center;
 }
-.reward-kv__desc{ margin: 0; font-size: 13.5px; line-height: 1.7; color: var(--gray-txt); text-wrap: pretty; }
+.reward-kv__desc{ margin: 10px 0 0; font-size: clamp(15px,1.9vw,19px); font-weight: 600; line-height: 1.6; color: var(--white-ink); text-wrap: pretty; }
 
 .reward-kv__coupon-wrap{
   position: relative; width: min(90%,360px);
@@ -492,10 +457,9 @@ html.intro-run .header__cta{ opacity: 0; transform: translateY(12px); }
   .header__character{ height: clamp(460px,84vh,1480px); transform: translateY(-18%); }
   .header__title{ font-size: clamp(28px,7.2cqw,68px); }
   .header__sub{ font-size: clamp(15px,1.2vw,23px); }
-  .cta-pc-img-btn{ width: clamp(220px,18vw,420px); }
+  .cta-mo-img-btn{ width: clamp(220px,18vw,420px); max-width: none; }
   .reward-kv{ min-height: clamp(300px,26vw,480px); }
   .reward-panel__amount strong{ font-size: clamp(38px,4.6vw,76px); }
-  .qr-layer__box{ max-width: 560px; }
 }
 
 /* ════════════════════════════════════════
